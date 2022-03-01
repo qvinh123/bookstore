@@ -1,0 +1,43 @@
+
+.products .more {
+    text-align: right;
+}
+
+.products .more a {
+    color: var(--primary-color);
+    font-weight: 500;
+}
+
+.product_title {
+    margin: 15px 0;
+    position: relative;
+    text-transform: uppercase;
+    text-align: center;
+    z-index: 0;
+}
+
+.product_title h3 {
+    padding: 0 15px;
+    position: relative;
+    z-index: 2;
+    display: inline-block;
+    margin: 0;
+    background: var(--white-color);
+}
+
+.product_title:after {
+    content: "";
+    width: 100%;
+    height: 2px;
+    background: var(--text-color);
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+    position: absolute;
+}
+
+@media screen and (max-width: 768px) {
+    .product_title h3{
+        font-size: 1.2rem;
+    }
+}

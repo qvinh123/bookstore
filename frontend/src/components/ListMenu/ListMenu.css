@@ -1,0 +1,165 @@
+.nav-menu {
+  position: absolute;
+  top: 0;
+  z-index: 2;
+  height: 30px;
+}
+
+.nav-menu > button {
+  border: none;
+  background: var(--primary-color);
+  color: var(--white-color);
+  padding: 4px 30px;
+}
+
+.nav-menu button i {
+  font-size: 1rem;
+}
+
+.nav-menu .list-menu {
+  background-color: var(--white-color);
+  position: relative;
+  display: none;
+  box-shadow: 0 1px 7px 0 rgb(0 0 0 / 35%);
+  z-index: 3;
+}
+
+.nav-menu:hover .list-menu {
+  display: block;
+}
+
+.list-menu li:first-child span {
+  color: var(--primary-color);
+  font-weight: 700;
+}
+
+.list-menu li {
+  list-style: none;
+  padding: 10px 15px;
+}
+
+.list-menu li:hover {
+  cursor: pointer;
+}
+
+.list-menu li a {
+  position: relative;
+  display: block;
+  color: var(--text-color);
+  font-weight: 700;
+  font-size: 12px;
+}
+
+
+.list-menu li a img {
+  margin-right: 5px;
+  width: 16px;
+}
+
+.list-menu li:hover>a {
+  color: var(--primary-color);
+}
+
+.list-menu li:hover .icon-hover {
+  display: inline-block;
+}
+
+.list-menu li:hover .icon-normal {
+  display: none;
+}
+
+.icon-hover {
+  display: none;
+}
+
+
+@media screen and (max-width: 992px) {
+
+  .nav-menu .list-menu {
+    display: block;
+    position: fixed;
+    top: 0;
+    right: -100%;
+    z-index: 99;
+    overflow-y: scroll;
+    height: 100%;
+    overflow-x: hidden;
+    transition: 0.3s all;
+    background-color: var(--primary-color);
+  }
+
+  .nav-menu .list-menu li a {
+    border-bottom: none;
+    font-size: 14px;
+    color: var(--white-color);
+    font-weight: 400;
+  }
+
+
+  .list-menu.active {
+    right: 0;
+  }
+
+  .list-menu li .icon-hover,
+  .list-menu li .icon-normal {
+    display: none;
+  }
+
+  .list-menu>li:hover .icon-hover {
+    display: none;
+  }
+
+  .list-menu li {
+    padding: 10px;
+  }
+
+  .input-group-btn button {
+    height: 100%;
+    width: 45px;
+    background: white;
+    border: none;
+  }
+
+  .drawer__header {
+    height: 50px;
+    display: table;
+    width: 100%;
+  }
+
+  .drawer__close {
+    vertical-align: middle;
+    display: table-cell;
+    text-align: right;
+  }
+
+  .drawer__close button {
+    background: transparent;
+    border: none;
+    right: 0px;
+    outline: none;
+    color: var(--white-color);
+  }
+
+  .drawer__close button span {
+    margin-right: 5px;
+    transform: translateY(-3px);
+    display: inline-block;
+  }
+
+  .nav-menu .list-menu {
+    padding: 0 15px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .nav-menu .list-menu {
+    width: 85%;
+  }
+}
+
+
+@media screen and (min-width: 576px) and (max-width: 992px) {
+  .nav-menu .list-menu {
+    width: 50%;
+  }
+}

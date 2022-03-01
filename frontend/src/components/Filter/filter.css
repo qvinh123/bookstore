@@ -1,0 +1,97 @@
+.filter {
+    background: #fff;
+    border: 1px solid #e6e6e6;
+    margin-bottom: 30px;
+    border-radius: 3px;
+    overflow: hidden;
+}
+
+.filter button {
+    background-color: var(--primary-color);
+    color: #fff;
+    cursor: pointer;
+    padding: 15px;
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid #e6e6e6 !important;
+    text-align: left;
+    outline: none;
+    position: relative;
+    display: block;
+}
+
+.filter>button::after {
+    content: "\f068";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    color: #fff;
+    position: absolute;
+    top: calc(50% - 9px);
+    right: 10px;
+}
+
+.filter>button.plug::after {
+    content: "\f067"
+}
+
+.filter>button span {
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+.sidebar-sort {
+    padding: 0 15px;
+    overflow: hidden;
+}
+
+.sidebar-sort.close {
+    height: 0
+}
+
+
+
+.sidebar-sort ul {
+    padding: 15px 0;
+    list-style: none;
+}
+
+.sidebar-sort ul li {
+    margin-bottom: 5px
+}
+
+.sidebar-sort li input[type="checkbox"],
+.sidebar-sort li input[type="radio"] {
+    appearance: none;
+    width: 16px;
+    height: 16px;
+    background: none;
+    border: 1px solid #dedede;
+    display: inline-block;
+    overflow: hidden;
+    vertical-align: middle;
+    margin-right: 8px;
+}
+
+.sidebar-sort li input[type="checkbox"]:checked:after,
+.sidebar-sort li input[type="radio"]:checked:after {
+    content: '\2714';
+    font-size: 14px;
+    line-height: 16px;
+    text-align: center;
+    display: block;
+    outline: none;
+    color: var(--primary-color);
+    outline: 1px solid #fff;
+}
+
+.c::after,
+.c::after {
+    content: '\2714';
+    font-size: 14px;
+    line-height: 16px;
+    text-align: center;
+    display: block;
+    outline: none;
+    color: var(--primary-color);
+    outline: 1px solid #fff;
+}

@@ -1,0 +1,67 @@
+[
+    {
+        "_id": "61b0402ad40846c46c484a69",
+        "slugName": "truyen-tranh",
+        "name": "Truyện tranh"
+    },
+
+    {
+        "_id": "61b04043d40846c46c484a6b",
+        "slugName": "van-hoc-viet-nam",
+        "name": "Văn học Việt Nam"
+    },
+
+    {
+        "_id": "61b04062d40846c46c484a6f",
+        "slugName": "manga-comic",
+        "name": "Manga - comic"
+    },
+
+    {
+        "_id": "61b04074d40846c46c484a71",
+        "slugName": "wings-books",
+        "name": "Wings Books"
+    },
+
+    {
+        "_id": "61b04085d40846c46c484a73",
+        "slugName": "lich-su-truyen-thong",
+        "name": "Lịch sử truyền thống"
+    },
+
+    {
+        "_id": "61b0408fd40846c46c484a75",
+        "slugName": "sach-cong-cu-doan-doi",
+        "name": "Sách công cụ Đoàn - Đội"
+    },
+
+    {
+        "_id": "61b0409ed40846c46c484a77",
+        "name": "Kiến thức - Khoa học",
+        "slugName": "kien-thuc-khoa-hoc"
+    },
+
+    {
+        "_id": "61b040a9d40846c46c484a79",
+        "name": "Văn học nước ngoài",
+        "slugName": "van-hoc-nuoc-ngoai"
+    },
+
+    {
+        "_id": "61b040b2d40846c46c484a7b",
+        "name": "Giải mã bản thân",
+        "slugName": "giai-ma-ban-than"
+    },
+
+    {
+        "_id": "61b041e2f4296a7ddbf98995",
+        "name": "Tạp chí",
+        "slugName": "tap-chi"
+    },
+
+    {
+        "_id": "61b04233f4296a7ddbf98997",
+        "slugName": "combo",
+        "name": "Combo"
+    }
+]

@@ -1,0 +1,9 @@
+#checkout_btn {
+    background: var(--primary-color);
+    border: none;
+}
+
+#order_summary span {
+    font-size: 1rem;
+    font-weight: 600;
+}

@@ -1,0 +1,12 @@
+.breadcrumb-small {
+    font-weight: 500;
+}
+
+.breadcrumb-small a {
+    transition: .3s all;
+    cursor: pointer;
+}
+
+.breadcrumb-small a:hover {
+    color: var(--primary-color);
+}

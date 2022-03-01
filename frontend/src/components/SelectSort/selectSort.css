@@ -1,0 +1,17 @@
+.sortBy label {
+    margin-right: 5px;
+}
+
+.sortBy select {
+    outline: 0px;
+    height: 40px;
+    line-height: 40px;
+    padding: 0px 22px 0px 10px;
+    border: 1px solid #e6e6e6;
+    max-width: 100%;
+    appearance: none;
+    background-image: url("https://theme.hstatic.net/200000343865/1000754934/14/ico-select.svg?v=92");
+    background-repeat: no-repeat;
+    background-position: right 5px center;
+    background-color: transparent;
+}

@@ -1,0 +1,37 @@
+.back-to-top {
+    position: fixed;
+    bottom: 30px;
+    right: 10px;
+    text-align: center;
+    height: 30px;
+    width: 30px;
+    line-height: 30px;
+    background: var(--primary-color);
+    color: #fff;
+    opacity: 0.4;
+    cursor: pointer;
+    border-radius: 3px;
+    z-index: 98;
+    display: none;
+    transition: all .3s;
+}
+
+.back-to-top i {
+    vertical-align: middle;
+    font-size: 14px
+}
+
+.back-to-top:hover {
+    opacity: 1;
+}
+
+.back-to-top.showScroll {
+    display: block;
+}
+
+@media (min-width: 768px) {
+    .back-to-top {
+        bottom: 35px;
+        right: 30px
+    }
+}

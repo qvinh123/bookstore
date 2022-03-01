@@ -1,0 +1,30 @@
+footer{
+    margin: 60px 0 0;
+}
+
+footer h5{
+    font-size: 18px;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+}
+footer ul li{
+    margin-bottom:.5rem;
+}
+footer ul li a{
+    color: #333;
+}
+footer .social-network ul{
+    display:flex
+}
+footer .social-network ul li a
+{
+    display: inline-block;
+    margin-right: 15px;
+}
+ i {
+    font-size:1.4rem
+}
+
+footer a:hover{
+    color:var(--primary-color)
+}

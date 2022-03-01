@@ -1,0 +1,48 @@
+.header_search input {
+    outline: none;
+    position: relative;
+}
+
+.header_search i {
+    color: var(--white-color);
+    font-size: 1rem;
+}
+
+.listProductSearch >div >a {
+    color: var(--primary-color) !important;
+    text-align: end;
+    display:block
+}
+
+.header_search button {
+    background-color: var(--primary-color);
+}
+
+.listProductSearch {
+    position: absolute;
+    top: 38px;
+    left: 0;
+    width: 100%;
+    z-index: 101;
+    background-color: var(--white-color);
+    box-shadow: 0 1rem 3rem rgba(0, 0, 0, .175);
+    margin-left: unset !important;
+}
+
+@media screen and (max-width: 768px) {
+    .listProductSearch {
+        position: static
+    }
+
+    .header_search input {
+        border: none;
+    }
+
+    .header_search i {
+        color: var(--primary-color);
+    }
+
+    .header_search button {
+        background-color: var(--white-color)
+    }
+}
