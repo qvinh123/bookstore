@@ -1,16 +1,7 @@
 const redis = require('redis');
 
 // connect to redis
-let redis_client
-
-if (process.env.REDISTOGO_URL) {
-    var rtg = redis.parse(process.env.REDISTOGO_URL);
-    redis_client = redis.createClient(rtg.port, rtg.hostname);
-
-    redis_client.auth(rtg.auth.split(":")[1]);
-} else {
-    redis_client = redis.createClient();
-}
+const redis_client = redis.createClient(process.env.REDIS_PORT, process.env.REDIS_URL);
 
 redis_client.on('connect', function () {
     console.log('redis client connected');
