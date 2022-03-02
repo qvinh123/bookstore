@@ -6,5 +6,5 @@ const redis = require('redis');
 // redis_client.on('connect', function () {
 //     console.log('redis client connected');
 // });
-
+const redis_client
 module.exports = redis_client;
