@@ -4,12 +4,10 @@ const redis = require('redis');
 let redis_client
 
 if (process.env.REDISTOGO_URL) {
-    redis_client = redis.createClient(process.env.REDISTOGO_URL);
-
     var rtg = redis.parse(process.env.REDISTOGO_URL);
-    var redis = redis.createClient(rtg.port, rtg.hostname);
+    redis_client = redis.createClient(rtg.port, rtg.hostname);
 
-    redis.auth(rtg.auth.split(":")[1]);
+    redis_client.auth(rtg.auth.split(":")[1]);
 } else {
     redis_client = redis.createClient();
 }
