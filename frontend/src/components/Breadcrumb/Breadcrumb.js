@@ -8,7 +8,7 @@ const Breadcrumb = ({ slugCategory, name, color, category }) => {
             {category &&
                 <>
                     <span> / </span>
-                    <Link to={`/collections/categories/${slugCategory}`}>{category}</Link>
+                    <Link to={`/categories/${slugCategory}`}>{category}</Link>
                 </>
             }
             {name &&
