@@ -257,6 +257,7 @@ const NewProductAdmin = () => {
         }
     }
 
+
     return (
         <LayoutAdmin>
             <MetaData title={'Thêm sản phẩm'} />
@@ -350,23 +351,28 @@ const NewProductAdmin = () => {
 
                     <div className="form-group">
                         <label htmlFor="authors_field">Tác giả</label>
-                        <AsyncPaginate
-                            value={product.authors}
-                            loadOptions={fetchAuthors}
-                            closeMenuOnSelect={true}
-                            onChange={option => setProduct(prev => (
-                                {
-                                    ...prev,
-                                    authors: option
-                                }
-                            ))}
-                            isMulti
-                            isSearchable={true}
-                            placeholder="Chọn tên tác giả"
-                            additional={{
-                                page: 1
-                            }}
-                        />
+                        {
+                            !loadingAddAuthor ?
+
+                                <AsyncPaginate
+                                    value={product.authors}
+                                    loadOptions={fetchAuthors}
+                                    closeMenuOnSelect={true}
+                                    onChange={option => setProduct(prev => (
+                                        {
+                                            ...prev,
+                                            authors: option
+                                        }
+                                    ))}
+                                    isMulti
+                                    isSearchable={true}
+                                    placeholder="Chọn tên tác giả"
+                                    additional={{
+                                        page: 1
+                                    }}
+                                /> : ""
+                        }
+
                     </div>
 
                     <div className="form-group">
@@ -441,22 +447,25 @@ const NewProductAdmin = () => {
 
                     <div className="form-group">
                         <label htmlFor="collectionBook_field">Bộ sách</label>
-                        <AsyncPaginate
-                            value={product.collectionBook}
-                            loadOptions={fetchCollectionBook}
-                            closeMenuOnSelect={true}
-                            onChange={option => setProduct(prev => (
-                                {
-                                    ...prev,
-                                    collectionBook: option
-                                }
-                            ))}
-                            isSearchable={true}
-                            placeholder="Chọn bộ sưu tập sách"
-                            additional={{
-                                page: 1
-                            }}
-                        />
+                        {
+                            !loadingAddCollectionBook ?
+                                <AsyncPaginate
+                                    value={product.collectionBook}
+                                    loadOptions={fetchCollectionBook}
+                                    closeMenuOnSelect={true}
+                                    onChange={option => setProduct(prev => (
+                                        {
+                                            ...prev,
+                                            collectionBook: option
+                                        }
+                                    ))}
+                                    isSearchable={true}
+                                    placeholder="Chọn bộ sưu tập sách"
+                                    additional={{
+                                        page: 1
+                                    }}
+                                /> : ""
+                        }
                     </div>
 
                     <div className='form-group'>

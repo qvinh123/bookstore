@@ -229,13 +229,13 @@ exports.forgetPasswordUser = catchAsyncErrors(async (req, res, next) => {
     try {
         await sendMail({
             email: user.email,
-            subject: "VBook khôi phục mật khẩu",
+            subject: "VbOOKS khôi phục mật khẩu",
             html: content
         })
 
         res.status(200).json({
             success: true,
-            message: `Gửi email tới: ${user.email}`
+            message: `Đã gửi email tới: ${user.email}`
         })
     } catch (err) {
         user.resetPasswordToken = undefined
@@ -285,9 +285,11 @@ exports.allUsers = catchAsyncErrors(async (req, res, next) => {
 
     const sort = APIFeatures.sort(req.query)
 
+    let usersCount = await User.count()
+
     const users = await User.find().skip(skip).limit(resultPerPage).sort(sort)
 
-    const usersCount = await User.count()
+    usersCount = await User.count()
 
     res.status(200).json({
         success: true,

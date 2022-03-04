@@ -45,12 +45,6 @@ const userSchema = mongoose.Schema({
     resetPasswordExpire: Date
 })
 
-userSchema.virtual("wishlist", {
-    ref: "Wishlist",
-    localField: '_id',
-    foreignField: "user"
-})
-
 userSchema.pre("save", async function () {
     const user = this
 

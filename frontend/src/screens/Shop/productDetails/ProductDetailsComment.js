@@ -6,7 +6,7 @@ import { useSelector } from 'react-redux'
 
 import { userSelector } from '../../../redux/selectors/userSelector'
 
-import { useHistory, useParams } from 'react-router'
+import { useHistory } from 'react-router'
 
 import * as ProductAPI from "../../../api/productAPI"
 import * as CommentAPI from "../../../api/commentAPI"
@@ -24,8 +24,6 @@ import ButtonFilter from '../../../components/ButtonFilter/ButtonFilter'
 import LoaderSmall from "../../../components/LoaderSmall/LoaderSmall"
 
 const ProductDetailsComment = ({ productDetails, productsOfAuthor, handle, flag }) => {
-    const { slugName } = useParams()
-
     const { user } = useSelector(userSelector)
 
     const arrayRating = useMemo(() => [
@@ -97,7 +95,7 @@ const ProductDetailsComment = ({ productDetails, productsOfAuthor, handle, flag 
         const fetchReviews = async () => {
             setLoading(true)
             try {
-                const { data } = await ProductAPI.getAllComments(slugName, currentPage + 1, filterRating.value)
+                const { data } = await ProductAPI.getAllComments(productDetails?.slugName, currentPage + 1, filterRating.value)
                 setReviews(data)
                 setLoading(false)
             } catch (err) {
@@ -106,13 +104,13 @@ const ProductDetailsComment = ({ productDetails, productsOfAuthor, handle, flag 
             }
         }
 
-        if (slugName) {
+        if (productDetails?.slugName) {
             fetchReviews()
         }
 
-        return () =>  setReviews([])
+        return () => setReviews([])
 
-    }, [alert, slugName, currentPage, filterRating])
+    }, [alert, productDetails?.slugName, currentPage, filterRating])
 
 
     const addReviewHandler = async () => {

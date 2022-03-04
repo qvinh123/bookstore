@@ -105,6 +105,16 @@ hr {
   vertical-align: middle;
 }
 
+#__react-alert__ div div div {
+  width: auto !important;
+}
+
+td{
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
 @media screen and (max-width: 992px) {
   .inner {
     padding: 15px 0;

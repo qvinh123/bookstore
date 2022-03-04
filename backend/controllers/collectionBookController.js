@@ -24,8 +24,10 @@ exports.getAllCollectionBook = catchAsyncError(async (req, res, next) => {
 
     const sort = APIFeatures.sort(req.query)
 
+    let collectionBookCount = await CollectionBook.count()
+
     const collectionBook = await CollectionBook.find().skip(skip).limit(resultPerPage).sort(sort)
-    const collectionBookCount = await CollectionBook.count()
+    collectionBookCount = await CollectionBook.count()
 
     res.status(200).json({
         success: true,

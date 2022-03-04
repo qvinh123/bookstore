@@ -11,6 +11,7 @@ import MetaData from '../../../components/MetaData/MetaData';
 import Loader from "../../../components/Loader/Loader"
 import LayoutAdmin from '../../../components/layout/LayoutAdmin';
 
+
 const ProductReviews = (props) => {
     const { product } = props.location.state
     const { id } = useParams()
@@ -59,7 +60,7 @@ const ProductReviews = (props) => {
                     <td className="col-2 py-4">{review.user.name}</td>
                     <td className="col-1 py-4">{review.rating} <i style={{ color: 'rgb(253, 204, 13)', fontSize: '14px' }} className="fas fa-star"></i></td>
                     <td className="col-3 py-4 d-flex flex-wrap justify-content-center">{review.images.map(img => (
-                        <img className="p-2" src={img.url} key={img.public_id} alt={img.public_id} width="50%" />
+                        <img className="p-2" src={img.url} key={img.public_id} alt={img.public_id} width="45%" />
                     ))}</td>
                     <td style={{ wordBreak: 'break-all' }} className="col-3 py-4">{review.review}</td>
                     <td className="col-1 py-4 ">

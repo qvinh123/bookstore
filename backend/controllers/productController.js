@@ -16,8 +16,10 @@ exports.getAllProducts = catchAsyncError(async (req, res, next) => {
 
     const match = APIFeatures.filter(req.query)
 
+    let productsCount = await Product.countDocuments()
+
     const products = await Product.find(match, "name price images tag priceOriginal slugName stock releaseDate", { skip, limit: resultPerPage, sort })
-    const productsCount = await Product.count(match)
+    productsCount = await Product.count(match)
 
     res.status(200).json({
         success: true,

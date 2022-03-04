@@ -135,20 +135,20 @@ const OrdersAdmin = () => {
                     <td className="col-3 py-4">{order._id}</td>
                     <td className="col-6 py-4">{order.orderItems.map(order => (
                         <div key={order.product} className="row mb-3">
-                            <div className="col-4 col-lg-2" >
+                            <div className="col-2" >
                                 <img src={order.image} alt={order.name} width="70px" />
                             </div>
 
-                            <div className="col-8 col-lg-5">
+                            <div className="col-6" style={{ textOverflow: "ellipsis", overflow: "hidden", whiteSpace: "nowrap" }}>
                                 <Link to={`/products/${order.slugName}`}>{order.name}</Link>
                             </div>
 
 
-                            <div className="col-4 col-lg-2 mt-4 mt-lg-0">
+                            <div className="col-2">
                                 <p>{formatPrice(order.price) + "đ"}</p>
                             </div>
 
-                            <div className="col-4 col-lg-3 mt-4 mt-lg-0">
+                            <div className="col-2">
                                 <p>{order.quantity} (quyển)</p>
                             </div>
                         </div>
@@ -181,7 +181,7 @@ const OrdersAdmin = () => {
                 loading ? <Loader /> :
                     <LayoutAdmin>
                         <h1 className="my-4">Tất cả đơn hàng ({orders.ordersCount})</h1>
-                        <div className="d-flex justify-content-between">
+                        <div className="d-flex justify-content-between align-items-center">
                             <div className='inputAdmin-search'>
                                 <input
                                     onChange={(e) => setValueSearch(e.target.value)}
@@ -198,8 +198,7 @@ const OrdersAdmin = () => {
                                 <SelectSort value={sort} sorts={listSort} handle={(e) => {
                                     setSort(e.target.value)
                                     setCurrentPage(0)
-                                }} 
-                                />
+                                }} />
                             </div>
                         </div>
                         <div className="order-filter py-3">

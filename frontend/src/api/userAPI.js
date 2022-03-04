@@ -9,9 +9,9 @@ export const forgetPassword = (emailData) => axios.post("/api/v1/password/forget
 
 export const newPassword = (token, passwordData) => http.post(`/api/v1/password/reset/${token}`, passwordData)
 
-export const getAllUsers = (page = 1, sort) => http.get(`/api/v1/admin/users?page=${page}${sort ? `&sort=${sort}` : ""}`)
+export const getAllUsers = (page = 1, sort="") => http.get(`/api/v1/admin/users?page=${page}${sort ? `&sort=${sort}` : ""}`)
 
 export const deleteUser = (id) => http.delete(`/api/v1/admin/users/${id}`)
 export const updateUser = (id, data) => http.patch(`/api/v1/admin/users/${id}`, data)
 
-export const searchUser = (keyword, page = 1, sort) => http.get(`/api/v1/admin/search/user?page=${page}${keyword ? `&keyword=${keyword}` : ""}${sort ? `&sort=${sort}` : ""}`)
+export const searchUser = (keyword, page = 1, sort="") => http.get(`/api/v1/admin/search/user?page=${page}${keyword ? `&keyword=${keyword}` : ""}${sort ? `&sort=${sort}` : ""}`)

@@ -109,7 +109,7 @@ const Collections = () => {
             })
         }
 
-    }, [price, currentPage, rating, objects, sort, alert, slug])
+    }, [price, currentPage, rating, objects, sort, alert])
 
     useEffect(() => {
         return () => {
@@ -161,7 +161,7 @@ const Collections = () => {
                                                         [5, 4, 3, 2, 1].map(option => {
                                                             return (
                                                                 <li key={option}>
-                                                                    <label style={{ fontSize: "10px",fontStyle: "italic" }}>
+                                                                    <label style={{ fontSize: "10px", fontStyle: "italic" }}>
                                                                         <input
                                                                             value={rating}
                                                                             onChange={() => {

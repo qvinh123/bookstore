@@ -178,19 +178,18 @@ const CommentItem = ({ review, handle, flag }) => {
                             </div>
                         }
                     </div>
-                    {review.review !== 'undefined' &&
+                    {
+                        review.review !== 'undefined' &&
                         <div className="product-comment_content">
                             {review.review}
                         </div>
                     }
 
-                    <div className="col-12 col-md-5">
-                        {
-                            imagesArr.length > 0 && <div className="product-comment__image-list-wrapper">
-                                <ImageGallery {...properties} />
-                            </div>
-                        }
-                    </div>
+                    {
+                        imagesArr.length > 0 && <div className="product-comment__image-list-wrapper">
+                            <ImageGallery {...properties} />
+                        </div>
+                    }
 
                     <div className="product-rating__time">
                         {new Date(review.createdAt).toLocaleDateString()} - {new Date(review.createdAt).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })} {new Date(review.createdAt).getTime() > 12 ? "PM" : "AM"}

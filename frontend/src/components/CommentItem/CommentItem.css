@@ -39,6 +39,7 @@
     display: flex;
     flex-wrap: wrap;
     margin-bottom: 8px;
+    overflow: auto;
 }
 
 .product-comment-item #dropdownActionComment {

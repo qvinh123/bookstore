@@ -111,8 +111,10 @@ exports.getAllOrders = catchAsyncError(async (req, res, next) => {
     const sort = APIFeatures.sort(req.query)
     const match = APIFeatures.filter(req.query)
 
+    let ordersCount = await Order.count()
+
     const orders = await Order.find(match).skip(skip).limit(resultPerPage).sort(sort)
-    const ordersCount = await Order.count(match)
+    ordersCount = await Order.count(match)
 
     let amountPrice = 0
     const a = await Order.find({})
@@ -146,7 +148,7 @@ exports.updateOrder = catchAsyncError(async (req, res, next) => {
     // if (req.body.orderStatus === "đã giao") {
     // order.orderItems.forEach(async (order) => await updateStock(order.product, order.quantity))
     // }
-    
+
     order.orderStatus = req.body.orderStatus
     order.deliveryAt = Date.now()
 

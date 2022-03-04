@@ -142,8 +142,10 @@ exports.getAllAuthors = catchAsyncError(async (req, res, next) => {
 
     const sort = APIFeatures.sort(req.query)
 
+    let authorsCount = await Author.count()
+
     const authors = await Author.find().skip(skip).limit(resultPerPage).sort(sort)
-    const authorsCount = await Author.count()
+    authorsCount = await Author.count()
 
     res.status(200).json({
         success: true,

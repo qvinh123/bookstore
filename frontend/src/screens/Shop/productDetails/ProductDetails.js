@@ -212,7 +212,7 @@ const ProductDetails = () => {
 
                         {
                             productsFilter(productsOfCollectionBook).length > 0 ?
-                                <ListProducts title="sách cùng bộ" products={productsFilter(productsOfCollectionBook)} loading={loadingProductsRelated} path={`/collections/collectionBook/${productDetails?.collectionBook?.slugName}`} />
+                                <ListProducts title="sách cùng bộ" products={productsFilter(productsOfCollectionBook)} loading={loadingProductsRelated} path={`/seriesbook/${productDetails?.collectionBook?.slugName}`} />
                                 : ""
                         }
 

@@ -67,7 +67,7 @@ const DashboardAdmin = () => {
                             <div className="col-md-4 col-12 mb-3">
                                 <div className="card text-white bg-success h-100">
                                     <div className="card-body">
-                                        <span className="text-center card-font-size">Products<br /> <b>{products && products.data.products.length}</b></span>
+                                        <span className="text-center card-font-size">Products<br /> <b>{products && products.productsCount}</b></span>
                                     </div>
                                     <Link className="card-footer text-white d-flex align-items-center justify-content-between" to="/admin/products">
                                         <span>View Details</span>

@@ -135,7 +135,7 @@ const CategoriesList = () => {
                             isModalAdd && <Modal loading={loadingAdd} submitHandler={() => addCategoryHandler({ name: categoryAdd })} width="30%" onConfirm={() => setIsModalAdd(false)} title="Thêm">
                                 <h4>Thêm</h4>
                                 <div className="form-group mt-4">
-                                    <label htmlFor="nameAuthorAdd_field">Tên tác giả</label>
+                                    <label htmlFor="nameAuthorAdd_field">Tên danh mục</label>
                                     <input
                                         type="text"
                                         name="nameAuthorAdd"
