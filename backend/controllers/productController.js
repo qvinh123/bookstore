@@ -87,7 +87,12 @@ exports.newProduct = catchAsyncError(async (req, res, next) => {
     if (!isRequestValid) return next(new ErrorHandler('Yêu cầu không hợp lệ', 400))
 
     let images = []
-    images.push(req.body.images)
+
+    if (typeof req.body.images === 'string') {
+        images.push(req.body.images)
+    } else {
+        images = req.body.images
+    }
 
     let imagesLink = []
 
@@ -116,6 +121,7 @@ exports.newProduct = catchAsyncError(async (req, res, next) => {
 
     req.body.authors = authors
 
+
     let objects = []
     if (typeof req.body.object === "string") {
         objects.push(req.body.object)
@@ -124,7 +130,9 @@ exports.newProduct = catchAsyncError(async (req, res, next) => {
     }
 
     req.body.object = objects
+
     req.body.user = req.user
+
     await Product.create(req.body)
 
     res.status(201).json({
