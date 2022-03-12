@@ -28,7 +28,7 @@ const Footer = () => {
                             </ul>
                         </div>
                         <div className="col-12 col-md-4 col-lg-3 order-lg-3 order-4 mb-4">
-                            <h5>Nhà xuất bản Kim Đồng</h5>
+                            <h5>Nhà xuất bản VbOOKS</h5>
                             <ul>
                                 <li>
                                     <a href="#!">Địa chỉ: Số 55 Quang Trung, Nguyễn Du, Hai Bà Trưng, Hà Nội</a>
@@ -36,7 +36,7 @@ const Footer = () => {
                                 <li>
                                     Số điện thoại: <a href="tel: (+84) 1900571595">(+84) 1900571595</a>
                                 </li>
-                                <li>Email: <a href="mailto: cskh_online@nxbkimdong.com.vn">cskh_online@nxbkimdong.com.vn</a></li>
+                                <li>Email: <a href="mailto: cskh_online@nxbkimdong.com.vn">cskh_online@nxbvbooks.com.vn</a></li>
                             </ul>
                         </div>
                         <div className="col-12 col-md-12 col-lg-3 social-network order-lg-4 order-1 mb-4">

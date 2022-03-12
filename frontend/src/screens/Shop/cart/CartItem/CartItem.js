@@ -68,7 +68,7 @@ const CartItem = ({ cart, cartItems }) => {
             </td>
             <td className="col-8 col-md-10 col-lg-10">
                 <div className="row align-items-lg-center">
-                    <div className="col-12 col-lg-4 order-lg-0 order-0 mb-3 mb-lg-0">
+                    <div style={{ textOverflow: "ellipsis", overflow: "hidden", whiteSpace: "pre-line" }} className="col-12 col-lg-4 order-lg-0 order-0 mb-3 mb-lg-0">
                         <Link
                             style={{ fontWeight: "500", color: "var(--text-color)", transition: ".3s all" }}
                             className="hoverRed"

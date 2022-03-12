@@ -82,6 +82,7 @@ const Login = () => {
                                     {loading ? <div className="spinner-border spinner-border-sm text-white"></div> : "Đăng nhập"}
                                 </button>
                                 <Link to="/password/forget" className="float-end mt-3">Quên mật khẩu?</Link>
+                                <Link to="/account/register" className="float-start mt-3">Đăng kí</Link>
                             </form>
                         </div>
 

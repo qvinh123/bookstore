@@ -35,7 +35,7 @@ const Header = (props) => {
 
                     <Search display="col-lg-5 d-none d-lg-block" />
 
-                    <div className="col-9 col-lg-4 d-flex align-items-center justify-content-sm-end justify-content-lg-start">
+                    <div className="col-9 col-lg-4 d-flex align-items-center justify-content-end justify-content-lg-start">
                         <div className="header_wishlist">
                             <Link to="/wishlist">
                                 <i className="far fa-heart">
