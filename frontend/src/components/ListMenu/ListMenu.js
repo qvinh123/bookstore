@@ -31,7 +31,7 @@ const ListMenu = (props) => {
                 Danh mục sản phẩm
             </button>
             <ul className={`list-menu ${props.bar ? 'active' : ''}`}>
-                <li>
+                <li className="d-none d-lg-block">
                     <Button url="/tat-ca-san-pham">
                         <span>Tất cả sản phẩm</span>
                     </Button>
@@ -52,20 +52,32 @@ const ListMenu = (props) => {
                     <Search />
                 </li>
 
-                {errorCategories ? <p>{errorCategories}</p> : categories?.map(category => (
-                    <li key={category._id}>
-                        <Button url={`/categories/${category.slugName}`} onClick={props.handleClickBar}>
+                {
+                    errorCategories ? <p>{errorCategories}</p> :
+                        <>
+                            <li>
+                                <Button url="/tat-ca-san-pham" onClick={props.handleClickBar}>
+                                    <span>Tất cả sản phẩm</span>
+                                </Button>
+                            </li>
+                            {
+                                categories?.map(category => (
+                                    <li key={category._id}>
+                                        <Button url={`/categories/${category.slugName}`} onClick={props.handleClickBar}>
 
-                            <img src="//theme.hstatic.net/200000343865/1000754934/14/hd_mainlink_icon2.png?v=74"
-                                alt={category.slugName} className="icon-normal" />
-                            <img src="//theme.hstatic.net/200000343865/1000754934/14/hd_mainlink_iconhover2.png?v=74"
-                                alt={category.slugName} className="icon-hover" />
+                                            <img src="//theme.hstatic.net/200000343865/1000754934/14/hd_mainlink_icon2.png?v=74"
+                                                alt={category.slugName} className="icon-normal" />
+                                            <img src="//theme.hstatic.net/200000343865/1000754934/14/hd_mainlink_iconhover2.png?v=74"
+                                                alt={category.slugName} className="icon-hover" />
 
-                            <span>{category.name}</span>
-                        </Button>
+                                            <span>{category.name}</span>
+                                        </Button>
 
-                    </li>
-                ))}
+                                    </li>
+                                ))
+                            }
+                        </>
+                }
             </ul>
         </div>
     )
