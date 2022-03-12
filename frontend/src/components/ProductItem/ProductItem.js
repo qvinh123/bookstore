@@ -20,9 +20,7 @@ const ProductItem = ({ product }) => {
                         Hết hàng
                     </div>
                 }
-
-                <TagSale value={product.tag} top="0" right="0" />
-
+                {product.tag !== 0 && <TagSale value={product.tag} top="0" right="0" />}
             </div>
             <div className="product-info">
                 <div className="product-title">

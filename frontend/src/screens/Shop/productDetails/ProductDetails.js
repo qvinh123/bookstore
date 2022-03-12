@@ -142,7 +142,10 @@ const ProductDetails = () => {
                                     <div className="col-lg-5">
                                         <div className="details-img">
                                             <GalleryImage items={arrImage} />
-                                            <TagSale value={productDetails?.tag} top="10" right="10" />
+                                            {
+                                                productDetails.tag !== 0 &&
+                                                <TagSale value={productDetails?.tag} top="10" right="10" />
+                                            }
                                             <div id="imageZoomPortal" />
                                         </div>
                                     </div>

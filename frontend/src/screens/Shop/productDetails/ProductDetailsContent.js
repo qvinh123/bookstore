@@ -120,11 +120,14 @@ const ProductDetailsContent = ({ productDetails }) => {
                 <div className="details-content-middle">
                     <div>
                         <span className="current-price">{formatPrice(productDetails.price)}₫</span>
-                        <span className="original-price">{formatPrice(productDetails.priceOriginal)}₫</span>
+                        {productDetails.tag !== 0 && <span className="original-price">{formatPrice(productDetails.priceOriginal)}₫</span>}
                     </div>
-                    <div className="sale-percentage">
-                        <span>(Bạn đã tiết kiệm được {formatPrice((productDetails.priceOriginal) - (productDetails.price))}₫)</span>
-                    </div>
+                    {
+                        productDetails.tag !== 0 &&
+                        <div className="sale-percentage">
+                            <span>(Bạn đã tiết kiệm được {formatPrice((productDetails.priceOriginal) - (productDetails.price))}₫)</span>
+                        </div>
+                    }
                 </div>
 
                 <div className="details-content-bottom">
@@ -157,7 +160,7 @@ const ProductDetailsContent = ({ productDetails }) => {
                                             </Fragment>
                                         ))}
                                     </div>
-                                </li> 
+                                </li>
 
                                 {
                                     productDetails.framework ?

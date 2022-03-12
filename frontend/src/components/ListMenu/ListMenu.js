@@ -31,12 +31,6 @@ const ListMenu = (props) => {
                 Danh mục sản phẩm
             </button>
             <ul className={`list-menu ${props.bar ? 'active' : ''}`}>
-                <li className="d-none d-lg-block">
-                    <Button url="/tat-ca-san-pham">
-                        <span>Tất cả sản phẩm</span>
-                    </Button>
-                </li>
-
                 <li className="mobile-nav__item d-block d-lg-none">
                     <div className="drawer__header">
                         <div className="drawer__close">
